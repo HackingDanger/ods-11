@@ -1,13 +1,14 @@
-import { Icon } from "../icon"
+import { Icon } from "components/icon"
+import * as S from "./styles.js"
 
 export const Faq = () => {
 
   return (
-    <div>
-      <div>
-        <h1>Como podemos saber como resolver os problemas?</h1>
+    <S.Container className="faq">
+      <div className="faq_content">
+        <h1 className="faq_content_title">Como podemos saber como resolver os problemas?</h1>
         <Icon name="arrow"/>
       </div>
-    </div>
+    </S.Container>
   )
 }
