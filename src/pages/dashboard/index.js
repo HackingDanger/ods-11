@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 // Utils
-import { data } from "utils/data";
+import { dashboard } from "data/dashboard";
 
 // Components
 import {Dashboard, Widgets} from "components";
@@ -28,7 +28,7 @@ export const DashboardPage = () => {
   const [registeredStates, setRegisteredStates] = useState();
 
   const handleFilterUF = () => {
-    const filterUF = data?.filter((item, index, self) => {
+    const filterUF = dashboard?.filter((item, index, self) => {
       return index === self.findIndex((t) => t.uf === item.uf);
     });
 
@@ -37,7 +37,7 @@ export const DashboardPage = () => {
 
   const handleGetUF = () => {
     let counts = {};
-    data.forEach((x) => {
+    dashboard.forEach((x) => {
       counts[x.uf] = (counts[x.uf] || 0) + 1;
     });
 
@@ -52,7 +52,7 @@ export const DashboardPage = () => {
   return (
     <Container>
       <Graph>
-        <Widgets title="Cadastrados:" desc={data.length} />
+        <Widgets title="Cadastrados:" desc={dashboard.length} />
         <Widgets title="Estados:" desc={uf.length} />
       </Graph>
       <Dashboard labels={uf} data={registeredStates} />
