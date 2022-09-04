@@ -1,74 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
+  padding: 0 29px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`
-
-export const ImgVerde = styled.img`
-  display: flex;
-  position: absolute;
-  top: 0.5rem;
-`
-export const ImgAmarelo = styled.img`
-  display: flex;
-  position: relative;
-`
-
-export const Header = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  h1{
-    color: #ffffff;
-    font-size: 2.5rem;
-    line-height: 3.25rem;
-    font-weight: 700;
-    text-align: center;
-    position: absolute;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    position: relative;
-    width: 25rem;
-    left: 3.1rem;
-    top: -12rem;
-  }
 `
 
 export const Box = styled.div`
+  width: 60%;
   display: flex;
   justify-content: space-between;
-  
-  width: 29rem;
-`
-
-export const BoxTerminal = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  select{
-    border: none;
-    border-radius: 20px;
-    background-color: #006032;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.62rem;
-    text-align: center;
-    cursor: pointer;
-
-    width: 10.62rem;
-    height: 1.5rem;
-  }
-
-  h2{
-    color: #ffffff;
-    font-size: 0.875rem;
-  }
+  margin: 62.5px 0 33px;
 `
 
 export const BoxPrioridade = styled.div`
@@ -85,29 +31,8 @@ export const BoxPrioridade = styled.div`
   }
 `
 
-export const BoxTitulo = styled.div`
-
-  h2{
-    color: #ffffff;
-    font-size: 0.875rem;
-    text-align: center;
-  }
-
-  select{
-    border: none;
-    border-radius: 20px;
-    background-color: #006032;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.62rem;
-    text-align: center;
-    cursor: pointer;
-
-    width: 10.62rem;
-    height: 1.5rem;
-  }
-`
-
 export const BoxDescricao = styled.div`
+  margin: 53px 0 30px;
 
   textarea{
     width: 28.12rem;
@@ -121,6 +46,7 @@ export const BoxDescricao = styled.div`
     color: #ffffff;
     font-size: 0.875rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
 `
 
