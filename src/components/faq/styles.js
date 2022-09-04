@@ -2,9 +2,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
 
   > div:nth-child(even) {
     > div {
@@ -19,7 +17,7 @@ export const Container = styled.section`
 export const Header = styled.div`
   position: relative;
   width: 100%;
-  height: 465px;
+  height: 305px;
 
   display: flex;
   align-items: flex-end;

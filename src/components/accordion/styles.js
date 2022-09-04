@@ -2,9 +2,10 @@
 import styled, { css } from "styled-components";
 
 export const FAQ = styled.div`
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 `;
 
 export const Header = styled.div`
