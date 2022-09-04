@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
 // Pages
-import { Form, DashboardPage } from "pages";
+import { FormPage, DashboardPage } from "pages";
 
 // Styles
 const GlobalStyles = createGlobalStyle`
@@ -27,7 +27,7 @@ root.render(
     <GlobalStyles />
     <Routes>
       <Route index path="/" element={<Navigate to="/form" replace />} />
-      <Route path="/form" element={<Form />} />
+      <Route path="/form" element={<FormPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
     </Routes>
   </BrowserRouter>
