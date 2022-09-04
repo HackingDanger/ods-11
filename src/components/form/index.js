@@ -7,7 +7,7 @@ import Img from '../../images/Vector 1.svg';
 import Imge from '../../images/Vector 2.svg';
 
 
-export default function Form() {
+export function Form() {
   return (
     <S.Container>
 
