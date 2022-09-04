@@ -2,20 +2,20 @@ import React from 'react'
 import * as S from "./styles";
 
 //imagens
-
 import Img from '../../images/Vector 1.svg';
 import Imge from '../../images/Vector 2.svg';
-
+import { Title } from 'components/title';
 
 export function Form() {
   return (
     <S.Container>
 
-      <S.Header>
+      {/* <S.Header>
         <S.ImgAmarelo src={Img} alt="#" />
         <S.ImgVerde src={Imge} alt="#" />
         <h1>Queremos sua opnião</h1>
-      </S.Header>
+      </S.Header> */}
+      <Title label="Queremos sua opnião"/>
 
       <S.Box>
 
