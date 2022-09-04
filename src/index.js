@@ -1,10 +1,11 @@
 // Libs
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 
-// Components
-import App from "./App";
+// Pages
+import { Form, DashboardPage } from "pages";
 
 // Styles
 const GlobalStyles = createGlobalStyle`
@@ -22,8 +23,12 @@ const GlobalStyles = createGlobalStyle`
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <>
+  <BrowserRouter>
     <GlobalStyles />
-    <App />
-  </>
+    <Routes>
+      <Route index path="/" element={<Navigate to="/form" replace />} />
+      <Route path="/form" element={<Form />} />
+      <Route path="/dashboard" element={<DashboardPage />} />
+    </Routes>
+  </BrowserRouter>
 );
