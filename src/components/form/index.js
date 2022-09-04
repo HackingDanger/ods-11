@@ -1,13 +1,18 @@
-import React from "react";
+// Libs
+import React, { useState } from "react";
+import axios from "axios";
 import * as S from "./styles";
 
 //imagens
-import Img from "../../images/Vector 1.svg";
-import Imge from "../../images/Vector 2.svg";
-import { Title } from "components/title";
-import { Select } from "components/select";
+import { Title, Select } from "components";
 
 export function Form() {
+  const [data, setData] = useState();
+
+  const handleSubmit = () => {
+    console.log(data)
+  };
+
   return (
     <S.Container>
       <Title label="Queremos sua opnião" />
@@ -22,6 +27,7 @@ export function Form() {
             { name: "Terminal Volta Redonda (3km)", value: "3" },
             { name: "Terminal Volta Redonda (2km)", value: "2" },
           ]}
+          onChange={(e) => setData({ ...data, Area_Locate: e })}
         />
 
         <S.BoxPrioridade>
@@ -39,23 +45,29 @@ export function Form() {
       </S.Box>
 
       <Select
-          label="Título"
-          placeholder="selecione"
-          options={[
-            { name: "Teste testando", value: "5" },
-            { name: "Teste testando", value: "4" },
-            { name: "Teste testando", value: "3" },
-            { name: "Teste testando", value: "2" },
-          ]}
-        />
+        label="Título"
+        placeholder="selecione"
+        options={[
+          { name: "Teste testando", value: "5" },
+          { name: "Teste testando", value: "4" },
+          { name: "Teste testando", value: "3" },
+          { name: "Teste testando", value: "2" },
+        ]}
+        onChange={(e) => setData({ ...data, Info_Type: e })}
+      />
 
       <S.BoxDescricao>
         <h2>Descrição</h2>
-        <textarea></textarea>
+        <textarea
+          onChange={(e) => {
+            const { value } = e.target;
+            setData({ ...data, Info_Description: value });
+          }}
+        />
       </S.BoxDescricao>
 
       <S.BoxButton>
-        <button>Enviar</button>
+        <button onClick={() => handleSubmit()}>Enviar</button>
       </S.BoxButton>
     </S.Container>
   );

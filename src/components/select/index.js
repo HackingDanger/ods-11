@@ -5,7 +5,7 @@ import * as S from "./styles";
 // Components
 import { Icon } from "components/icon";
 
-export const Select = ({ label, placeholder, options }) => {
+export const Select = ({ label, placeholder, options, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
 
@@ -29,6 +29,7 @@ export const Select = ({ label, placeholder, options }) => {
               onClick={(e) => {
                 setSelected(item.name);
                 setIsOpen(false);
+                onChange?.(item.value)
               }}
             >
               {item.name}
