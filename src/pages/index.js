@@ -1,1 +1,2 @@
-export {DashboardPage} from "./dashboard"
+export { DashboardPage } from "./dashboard";
+export { Form } from "./form";
