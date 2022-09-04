@@ -1,14 +1,13 @@
-import {icons} from "data/icons"
+import { icons } from "data/icons";
 
-export const Icon = ({name}) => {
+export const Icon = ({ name }) => {
+  const findedIcon = icons.find((icon) => icon.name === name);
 
-  const findedIcon = icons.find(icon => icon.name === name)
-
-  if(!findedIcon) new Error('Nome do ícone não existe.')
+  if (!findedIcon) new Error("Nome do ícone não existe.");
 
   return (
-    <div>
-      <img src={findedIcon.path} alt={findedIcon.name}/>
-    </div>
-  )
-}
+    <figure>
+      <img src={findedIcon.path} alt={findedIcon.name} />
+    </figure>
+  );
+};

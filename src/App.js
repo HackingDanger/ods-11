@@ -1,9 +1,17 @@
-import {DashboardPage} from "./pages"
+// Components
+import { Faq } from "components";
+
+// Data
+import { dataFAQ } from "data/faq.data";
+
+// Pages
+import { DashboardPage } from "./pages";
 
 function App() {
   return (
     <div className="App">
-      <DashboardPage/>
+      <Faq options={dataFAQ} />
+      <DashboardPage />
     </div>
   );
 }
